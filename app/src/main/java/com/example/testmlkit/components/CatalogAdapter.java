@@ -2,6 +2,7 @@ package com.example.testmlkit.components;
 
 import static com.example.testmlkit.utils.StorageHelper.backgroundExist;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,13 +30,14 @@ public class CatalogAdapter extends BaseAdapter {
     private final List<CatalogItem> itemList;
 
     private final Context context;
+    private final Activity activity;
     private final LayoutInflater inflater;
 
     public CatalogAdapter(Context context) {
         this.context = context;
-
+        this.activity = (Activity) context;
+        //
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
         itemList = new ArrayList<>();
     }
 
